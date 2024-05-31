@@ -1,0 +1,43 @@
+@page "/description"
+@inject NavigationManager NavigationManager
+@attribute [StreamRendering]
+@rendermode InteractiveServer
+
+<div class="row">
+    <div class="col-lg-15 offset-lg-15 pt-15 pb-15 border" align = "align=center">
+        <div class="mb-3 text-center flex-column">
+            <h3>พยาบาล</h3> 
+            <h5>รายละเอียด</h5>
+        </div>
+        <div class="mb-3">
+            <label >วันที่</label>
+             <input type="date" id="start" name="trip-start" value="2024-05-30" min="2024-05-1" max="2030-05-31" />
+        </div>
+
+<table class="table table-bordered">
+      <tr>
+        <td align="center">HN / CID</td>
+        <td align="center">ชื่อคนไข้</td>
+        <td align="center">ชื่อเวรเปล</td>
+        <td colspan="2" align="center">สถานะ</td>
+        
+      </tr>
+      <tr>
+        <td> </td>
+        <td></td>
+        <td></td>
+        <td><button type="submit" class="btn btn-primary" align = "Align-center">ถึงแล้ว</button></td>
+        <td><button type="lost" class="btn btn-primary" align = "Align-center">หายสาบสูญ</button</td>
+       
+        
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+</table>
+    </div>
+</div>

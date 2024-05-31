@@ -1,0 +1,48 @@
+@page "/input_detail"
+@inject NavigationManager NavigationManager
+@attribute [StreamRendering]
+@rendermode InteractiveServer
+
+<div class="row">
+    <div class="col-lg-4 offset-lg-4 pt-4 pb-4 border">
+        <div class="mb-3 text-center flex-column">
+            <h3>เวรเปล</h3> 
+        </div>
+        <div class="mb-3">
+            <label >วันที่</label>
+             <input type="date" id="start" name="trip-start" value="2024-05-30" min="2024-05-1" max="2030-05-31" />
+        </div>
+        <div class="mb-3">
+            <label>HN/CID</label>
+            <input type="HN/CID" class="form-control" id="HN/CID" placeholder="ระบุ HN/CID" name="HN/CID">
+        </div>
+        <div class="mb-3">
+            <label>ชื่อ-นามสกุล</label>
+            <input type="name" class="name" id="password" placeholder="ระบุชื่อคนไข้" name="name">
+        </div>
+        <div class="mb-3">
+            <label for="pickup">จุดที่รับ</label>
+            <select name="pickup" id="pickup">
+                <option value="opd1">OPD1</option>
+                <option value="opd2">OPD2</option>
+                <option value="opd3">OPD3</option>
+                <option value="opd4">OPD4</option>
+            </select>
+        </div>
+        <div class="mb-3">
+             <label for="deliver">จุดที่ส่ง</label>
+            <select name="deliver" id="deliver">
+                <option value="opd1">OPD1</option>
+                <option value="opd2">OPD2</option>
+                <option value="opd3">OPD3</option>
+                <option value="opd4">OPD4</option>
+            </select>
+        </div>
+        <div class="mb-3 text-center">
+            <span class="text-danger"></span>
+        </div>
+        <div class="mb-3 d-grid gap-2">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </div>
+</div>

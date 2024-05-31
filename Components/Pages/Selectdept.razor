@@ -1,0 +1,36 @@
+@page "/selectdept"
+@inject NavigationManager NavigationManager
+@attribute [StreamRendering]
+@rendermode InteractiveServer
+
+<div class="row">
+    <div class="col-lg-4 offset-lg-4 pt-4 pb-4 border">
+        <div class="mb-3 text-center flex-column">
+            <h3>พยาบาล</h3> 
+        </div>
+        <div class="mb-3">
+            <label >วันที่</label>
+             <input type="date" id="start" name="trip-start" value="2024-05-30" min="2024-05-1" max="2030-05-31" />
+        </div>
+        <div class="mb-3">
+            <label for="pickup">แผนก</label>
+            <select name="pickup" id="pickup">
+                <option value="opd1">OPD1</option>
+                <option value="opd2">OPD2</option>
+                <option value="opd3">OPD3</option>
+                <option value="opd4">OPD4</option>
+            </select>
+        </div>
+        <div class="mb-3 d-grid gap-2">
+            <Button  @onclick="button_click_desc" class="btn btn-primary" >Submit</Button>
+        </div>
+    </div>
+</div>
+
+@code 
+{ 
+    private void button_click_desc() 
+    { 
+        NavigationManager.NavigateTo("/description/"); 
+    } 
+}
