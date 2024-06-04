@@ -1,4 +1,6 @@
+using Microsoft.EntityFrameworkCore;
 using WPS.Components;
+using WPS.Context;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -8,6 +10,8 @@ builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
 builder.Services.AddBlazorBootstrap();
 
+// DbContext
+builder.Services.AddDbContext<ApplicationDBContext>(item => item.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
